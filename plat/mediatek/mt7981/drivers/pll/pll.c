@@ -97,8 +97,9 @@ void mtk_pll_init(int skip_dcm_setting)
 	mmio_write_32(ARMPLL_CON1, 0x82000000); /* 1.3G */
 
 	//mmio_setbits_32(ARMPLL_CON0, 0x124); /* divider for 650M */
-
-	mmio_setbits_32(ARMPLL_CON0, 0x114); /* divider for 1.3G */
+	//mmio_setbits_32(ARMPLL_CON0, 0x114); /* divider for 1.3G */
+	mmio_setbits_32(ARMPLL_CON0, 0x104); /* divider for 2.6G */
+	
 
 	mmio_setbits_32(NET2PLL_CON0, 0x114);
 	mmio_setbits_32(MMPLL_CON0, 0x124);
